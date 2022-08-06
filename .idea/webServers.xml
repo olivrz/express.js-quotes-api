@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8c9afea8-4e45-4149-8ad9-7e8c5a3a04ac" name="local" url="http://localhost/4001">
+        <fileTransfer mountedRoot="C:\Users\olive\js-projects\express-quotes-api" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
