@@ -13,7 +13,8 @@ app.use(express.static('public'));
  */
 app.get('/api/quotes/random', (req, res, next) => {
     const randomQuote = getRandomElement(quotes);
-    res.send({randomQuote});
+    console.log(randomQuote);
+    res.send({quote: randomQuote});
 });
 
 /**
@@ -25,11 +26,11 @@ app.get('/api/quotes', (req, res, next) => {
         for(q of quotes) {
             console.log('Looping through quotes', q.person);
             if(q.person === req.query.person) {
-                tempQuotes.push(q.quote);
+                tempQuotes.push(q);
             }
         }
         console.log(tempQuotes);
-        res.send({tempQuotes});
+        res.send({quotes: tempQuotes});
     } else {
         res.send({
             quotes: quotes
@@ -44,7 +45,7 @@ app.post('/api/quotes', (req, res, next) => {
     if(req.query.quote && req.query.person) {
         const quoteObject = {quote: req.query.quote, person: req.query.person};
         quotes.push(quoteObject);
-        res.status(201).send({quoteObject});
+        res.status(201).send({quote: quoteObject});
     } else {
         res.status(400).send();
     }
