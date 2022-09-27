@@ -5,11 +5,22 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Nunito Sans', sans-serif;
+  height: 90vh;
+  justify-items: center;
+  justify-content: center;
 }
 
 h1 {
   text-align: center;
   font-weight: bold;
+  font-size: calc(5vmin + 5px);
+}
+
+h2 {
+  font-size: calc(3vmin + 5px);
+  justify-content: center;
+  display: flex;
+  padding: 8vh 0 0 0;
 }
 
 nav {
@@ -17,6 +28,7 @@ nav {
   max-width: 400px;
   display: flex;
   justify-content: center;
+  font-size: calc(1.5vmin + 5px);
 }
 
 a {
@@ -45,7 +57,7 @@ button {
   background-color: #2e4a99;
   color: #fff;
   padding: 10px;
-  font-size: 16px;
+  font-size: calc(2vmin + 5px);
 }
 
 button:hover {
@@ -64,4 +76,18 @@ button:hover {
 
 .quote-text {
   font-style: italic;
+}
+
+.request-buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column
+}
+
+.button-container {
+  display: inline-flex;
+}
+
+.get-quotes {
+
 }
